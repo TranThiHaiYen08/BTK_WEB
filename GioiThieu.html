@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giới thiệu</title>
+  <link rel="shortcut icon" href="/Trangchinh/images/logo.jpg">
+
+  <!-- Bootstrap CSS -->
+  <link href="Trangchinh/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Font1|Font2|Font3&display=swap">
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
+  <link href="Trangchinh/css/style.css" rel="stylesheet">
+  <style type="text/css">
+    
+    #layout {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+
+    main {
+      background-color: rgb(252, 252, 252);
+      line-height: 1.8em;
+      color: #555;
+      padding: 1em;
+      border: double 4px #ffd1dcd2;
+      border-radius: 25px;
+      margin-top: 20px;
+      text-align:justify;
+    }
+    .container1 {
+      display: flex;
+      height: 80vh;
+    }
+
+    .left-section {
+      flex: 5;
+      background-color: #fffaf0;
+      padding: 20px;
+    }
+    .hethong{
+      margin-left: 90px;
+      color: black;
+      display: inline-block;
+    }
+    .imght{
+      margin-bottom: -45px;
+      margin-left: 20px;
+    }
+
+    .left-section img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .right-section {
+      flex: 7;
+      background-color: #fffaf0;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+    }
+
+    iframe {
+      width: 90%;
+      height: 90%;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!--Header phụ-->
+  <header>
+		<div id="logo">
+			<a href="index.html"><img src="Trangchinh/images/logo.png" alt="Logo" class="VitaVerdant"></a>
+		</div>
+
+		<div class="input-group" id="search-box">
+			<input type="text" class="form-control" id="search-input" placeholder="Tìm kiếm sản phẩm ">
+			<div class="input-group-append">
+				<button class="btn btn-outline-light" type="button" onclick="searchProduct()">
+					<i class="fas fa-search"></i>
+				</button>
+			</div>
+		</div>
+		<div id="login-link">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+				<path d="M11.8575 11.6341C13.181 11.6341 14.327 11.1594 15.2635 10.2228C16.1998 9.28636 16.6747 8.14058 16.6747 6.81689C16.6747 5.49365 16.2 4.34771 15.2634 3.41098C14.3268 2.4747 13.1809 2 11.8575 2C10.5338 2 9.388 2.4747 8.45157 3.41113C7.51514 4.34756 7.04028 5.49349 7.04028 6.81689C7.04028 8.14058 7.51514 9.28652 8.45157 10.2229C9.3883 11.1592 10.5342 11.6341 11.8575 11.6341V11.6341ZM9.28042 4.23983C9.99896 3.5213 10.8418 3.17203 11.8575 3.17203C12.8729 3.17203 13.716 3.5213 14.4347 4.23983C15.1532 4.95852 15.5026 5.80157 15.5026 6.81689C15.5026 7.83251 15.1532 8.6754 14.4347 9.39409C13.716 10.1128 12.8729 10.4621 11.8575 10.4621C10.8422 10.4621 9.99926 10.1126 9.28042 9.39409C8.56173 8.67556 8.21231 7.83251 8.21231 6.81689C8.21231 5.80157 8.56173 4.95852 9.28042 4.23983Z" fill="white"/>
+				<path d="M20.2863 17.379C20.2592 16.9893 20.2046 16.5642 20.1242 16.1153C20.043 15.663 19.9385 15.2354 19.8134 14.8447C19.684 14.4408 19.5084 14.0419 19.2909 13.6597C19.0656 13.2629 18.8007 12.9175 18.5034 12.6332C18.1926 12.3358 17.812 12.0967 17.372 11.9223C16.9334 11.7488 16.4475 11.6609 15.9276 11.6609C15.7234 11.6609 15.526 11.7447 15.1447 11.9929C14.91 12.146 14.6355 12.323 14.3291 12.5188C14.0671 12.6857 13.7122 12.8421 13.2738 12.9837C12.8461 13.1221 12.4118 13.1923 11.983 13.1923C11.5546 13.1923 11.1203 13.1221 10.6923 12.9837C10.2544 12.8423 9.89931 12.6859 9.63778 12.5189C9.33428 12.325 9.05962 12.148 8.82143 11.9928C8.44042 11.7445 8.24297 11.6608 8.03881 11.6608C7.51879 11.6608 7.03295 11.7488 6.59457 11.9225C6.15481 12.0966 5.77411 12.3357 5.46298 12.6334C5.16574 12.9178 4.90085 13.2631 4.67563 13.6597C4.45849 14.0419 4.28271 14.4406 4.15332 14.8448C4.02835 15.2356 3.92383 15.663 3.84265 16.1153C3.76208 16.5636 3.70761 16.9888 3.6806 17.3794C3.65405 17.7614 3.64062 18.1589 3.64062 18.5605C3.64062 19.6045 3.9725 20.4497 4.62695 21.073C5.27331 21.6881 6.12841 21.9999 7.1686 21.9999H16.7987C17.8386 21.9999 18.6937 21.6881 19.3402 21.073C19.9948 20.4501 20.3267 19.6046 20.3267 18.5603C20.3265 18.1573 20.313 17.7598 20.2863 17.379V17.379ZM18.5321 20.2238C18.105 20.6303 17.538 20.8279 16.7986 20.8279H7.1686C6.42901 20.8279 5.862 20.6303 5.43506 20.224C5.0162 19.8253 4.81265 19.281 4.81265 18.5605C4.81265 18.1857 4.82501 17.8157 4.84973 17.4605C4.87384 17.112 4.92312 16.7291 4.99621 16.3223C5.06839 15.9206 5.16025 15.5435 5.2695 15.2022C5.37433 14.8749 5.5173 14.5508 5.69461 14.2386C5.86383 13.941 6.05853 13.6858 6.27337 13.4801C6.47433 13.2877 6.72763 13.1302 7.02609 13.0121C7.30212 12.9028 7.61233 12.843 7.94909 12.834C7.99013 12.8558 8.06322 12.8975 8.18163 12.9747C8.42257 13.1317 8.70028 13.3108 9.00728 13.5069C9.35335 13.7276 9.79921 13.9268 10.3319 14.0988C10.8765 14.2749 11.4319 14.3643 11.9832 14.3643C12.5345 14.3643 13.0901 14.2749 13.6344 14.099C14.1675 13.9267 14.6132 13.7276 14.9597 13.5066C15.2739 13.3058 15.5438 13.1319 15.7848 12.9747C15.9032 12.8976 15.9763 12.8558 16.0173 12.834C16.3542 12.843 16.6644 12.9028 16.9406 13.0121C17.2389 13.1302 17.4922 13.2878 17.6932 13.4801C17.908 13.6856 18.1027 13.9409 18.2719 14.2387C18.4494 14.5508 18.5925 14.875 18.6972 15.202C18.8066 15.5438 18.8986 15.9207 18.9706 16.3222C19.0436 16.7297 19.093 17.1127 19.1171 17.4606V17.4609C19.142 17.8148 19.1545 18.1846 19.1547 18.5605C19.1545 19.2811 18.951 19.8253 18.5321 20.2238V20.2238Z" fill="white"/>
+			</svg>
+			<div class="list-unstyled">
+				
+					<a class="btnx" href="/account/login" title="Đăng nhập">Đăng nhập</a>
+					<span>/</span>
+					<a href="/account/register" title="Đăng ký">Đăng ký</a>
+			</div>
+		</div>
+		<div class="block-cart">
+			<a href="/cart" class="header-cart" aria-label="Xem giỏ hàng" title="Giỏ hàng">
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+					<g clip-path="url(#clip0_2_75)">
+						<path d="M19.7031 7.22905C19.439 6.89772 19.0428 6.70764 18.616 6.70764H14.7643L12.6756 1.9251C12.5461 1.62858 12.2007 1.49307 11.9042 1.62264C11.6076 1.75213 11.4722 2.09756 11.6017 2.39412L13.4855 6.70768H6.51449L8.39828 2.39412C8.52778 2.09756 8.39238 1.75217 8.09582 1.62264C7.7993 1.49307 7.45387 1.6285 7.32438 1.9251L5.23574 6.70768H1.38403C0.957229 6.70768 0.561018 6.89772 0.296916 7.22909C0.0376587 7.5544 -0.0580053 7.9726 0.0344556 8.37659L2.09137 17.361C2.235 17.9883 2.78996 18.4264 3.44094 18.4264H16.5591C17.21 18.4264 17.765 17.9883 17.9086 17.361L19.9655 8.37655C20.058 7.97256 19.9623 7.55436 19.7031 7.22905ZM16.5591 17.2545H3.44094C3.34145 17.2545 3.2543 17.1893 3.23371 17.0994L1.1768 8.11506C1.16067 8.04456 1.18774 7.99151 1.21336 7.95944C1.23711 7.9296 1.2909 7.87956 1.38403 7.87956H4.72399L4.57051 8.231C4.44102 8.52757 4.57641 8.87296 4.87297 9.00249C4.9493 9.03585 5.02883 9.05163 5.10715 9.05163C5.33301 9.05163 5.54824 8.92026 5.64442 8.70007L6.00274 7.87964H13.9973L14.3557 8.70007C14.4518 8.9203 14.6671 9.05163 14.8929 9.05163C14.9712 9.05163 15.0508 9.03585 15.1271 9.00249C15.4237 8.87299 15.5591 8.52757 15.4296 8.231L15.2761 7.87956H18.6161C18.7092 7.87956 18.763 7.9296 18.7867 7.95944C18.8123 7.99155 18.8394 8.0446 18.8233 8.11503L16.7664 17.0994C16.7457 17.1893 16.6586 17.2545 16.5591 17.2545Z" fill="white"/>
+						<path d="M6.48438 10.4186C6.16078 10.4186 5.89844 10.6809 5.89844 11.0045V15.3014C5.89844 15.625 6.16078 15.8873 6.48438 15.8873C6.80797 15.8873 7.07031 15.625 7.07031 15.3014V11.0045C7.07031 10.6809 6.80801 10.4186 6.48438 10.4186Z" fill="white"/>
+						<path d="M10 10.4186C9.67641 10.4186 9.41406 10.6809 9.41406 11.0045V15.3014C9.41406 15.625 9.67641 15.8873 10 15.8873C10.3236 15.8873 10.5859 15.625 10.5859 15.3014V11.0045C10.5859 10.6809 10.3236 10.4186 10 10.4186Z" fill="white"/>
+						<path d="M13.5156 10.4186C13.192 10.4186 12.9297 10.6809 12.9297 11.0045V15.3014C12.9297 15.625 13.192 15.8873 13.5156 15.8873C13.8392 15.8873 14.1016 15.625 14.1016 15.3014V11.0045C14.1015 10.6809 13.8392 10.4186 13.5156 10.4186Z" fill="white"/>
+					</g>
+					<defs>
+						<clipPath id="clip0_2_75">
+							<rect width="20" height="20" fill="white"/>
+						</clipPath>
+					</defs>
+				</svg>
+				</a>
+		</div>
+				
+		
+<!--<div id="login-link">
+			<a class="nav-link" href="#"><img src="Trangchinh/images/user.svg"></a>
+			<a class="nav-link" href="#"><img src="Trangchinh/images/cart.svg"></a>
+		</div>-->
+		
+	</header>
+	<!--End Header 1-->
+
+	<!-- Start Header/Navigation -->
+	<nav class="custom-navbar navbar navbar navbar-expand-md nagvbar-dark b-dark" arial-label="Furni navigation bar">
+		<div class="container">
+			<div class="collapse navbar-collapse" id="navbarsFurni">
+				<ul class="custom-navbar-nav navbar-nav me-auto mb-2 mb-md-0">
+					<li >
+						<a class="nav-link" href="index.html">Trang chủ</a>
+					</li>
+					<li>
+						<div class="dropdown">
+							<a class="nav-link" href="TrangChuyenMucGK/TrangChuyenMucGK.html">Sản phẩm</a>
+							<div class="dropdown-content">
+								<a href="TrangChuyenMucGK/trangdiem.html">Trang điểm</a>
+								<a href="TrangChuyenMucGK/chamsocda.html">Chăm sóc da</a>
+								<a href="TrangChuyenMucGK/chamsoctoc.html">Chăm sóc tóc</a>
+								<a href="TrangChuyenMucGK/chamsoccothe.html">Chăm sóc cơ thể</a>
+								<a href="TrangChuyenMucGK/huongthom.html">Hương thơm</a>
+								<a href="TrangChuyenMucGK/quatang.html">Quà tặng</a>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item active"><a class="nav-link" href="GioiThieu.html">Giới thiệu</a></li>
+					<li><a class="nav-link" href="KhuyenMai.html">Khuyến mãi</a></li>
+					<li>
+						<div class="dropdown">
+							<a class="nav-link" href="../blog/blog1.html">Blog</a>
+							<div class="dropdown-content">
+								<a href="../blog/tintucvevitaverdant.html">Tin tức về Vitaverdant</a>
+								<a href="../blog/kienthucmypham.html">Kiến thức mỹ phẩm</a>
+								<a href="../blog/goclamdep.html">Góc làm đẹp</a>
+								<a href="../blog/vandeveda.html">Vấn đề về da</a>
+							</div>
+						</div>
+					</li>
+					<li><a class="nav-link" href="LienHe.html">Liên hệ</a></li>
+				</ul>
+	<!-- Start Header/Navigation -->
+
+				<div class="col-lg-3 col-search-cart "style="padding-left: 3px;">
+					<div class="phone_header">
+		<div class="ct-header">
+			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 22 20" fill="none"  x="-10">
+				<path d="M7.0026 1.73991L7.81809 2.39884C9.15027 3.47525 9.3185 5.4399 8.18875 6.72742L8.07556 6.85642C7.26593 7.77912 7.04991 9.14192 7.85868 10.0643C8.63222 10.9465 9.67036 11.7227 11.1784 12.5682C12.3675 13.235 13.8544 12.9186 14.7532 11.8942L14.832 11.8045C15.9034 10.5834 17.7512 10.4249 19.0146 11.4458L19.7715 12.0573C20.8569 12.9344 21.2348 14.4653 20.4545 15.6219C19.7181 16.7134 18.8967 17.5674 17.9272 18.2654C17.3087 18.7107 16.512 18.8096 15.7757 18.6119C8.57753 16.6789 4.223 13.167 1.09904 6.66232C0.827031 6.09593 0.737959 5.44474 0.958532 4.85622C1.42443 3.61316 2.29572 2.56629 3.64249 1.56464C4.64717 0.817412 6.02944 0.953575 7.0026 1.73991Z" stroke="#1C5B41" stroke-width="1.5"/>
+				<path d="M3.32318 2.79199L8.30918 6.82076" stroke="#1C5B41" stroke-width="1.5"/>
+				<path d="M17.4891 2.54224L14.8114 5.20087" stroke="#1C5B41" stroke-width="1.5" stroke-linecap="round"/>
+				<path d="M18.9584 6.37634L16.9225 7.08326" stroke="#1C5B41" stroke-width="1.5" stroke-linecap="round"/>
+				<path d="M12.9167 3.0647L13.6407 1.04166" stroke="#1C5B41" stroke-width="1.5" stroke-linecap="round"/>
+				<path d="M14.9571 12.1924L19.9431 16.2211" stroke="#1C5B41" stroke-width="1.5"/>
+			</svg>
+			<span>Hotline:</span> <a>   0827084425</a>
+			</div>
+		</div>
+	</nav>
+  <!--CRO-BT-->
+  <div class="BT">
+    <div class="cro-buttons">
+      <a href="https://www.facebook.com/share/19TwtrG2gJ/?mibextid=LQQJ4d" class="facebook" target="_blank"><img
+          src="Trangchinh/images/facebook.jpg" alt="Facebook"></a>
+      <a href="https://www.tiktok.com/@mptcvitaverdant?_t=8rnXl1zlRsF&_r=1" class="tiktok" target="_blank"><img
+          src="Trangchinh/images/tiktok.png" alt="TikTok"></a>
+      <a href="https://www.instagram.com/vitaverdant_?igsh=eHNyMGRoY2lnZzJ5&utm_source=qr" class="instagram" target="_blank"><img
+          src="Trangchinh/images/ig.png" alt="Instagram"></a>
+    </div>
+  </div>
+  <!--CRO-BT-->
+  <div id="layout">
+    <main>
+      <p><span style="text-align:justify;"><img data-thumb="original" original-height="476" original-width="480"
+            src="Trangchinh/images/giới thiệu.webp"
+            style="margin-right: 10px; margin-left: 10px; float: left; border-width: 0px; border-style: solid; width: 275px; height: 345px;" /></span>
+            <p></p><span style="color: #35502a;"><em><strong>Về VitaVerdant</strong></em></span>, với tên gọi mang ý nghĩa “sức sống xanh”, là biểu tượng của sự hòa quyện giữa thiên nhiên và vẻ đẹp bền vững. Chúng tôi tự hào giới thiệu một thương hiệu không chỉ mang đến những sản phẩm chăm sóc da và trang điểm thuần chay chất lượng cao mà còn truyền cảm hứng cho phong cách sống tôn trọng tự nhiên và lành mạnh.</p>
+            <p></p><span style="color: #35502a;"><em><strong>Cam kết của chúng tôi</strong></em></span>
+            Tại VitaVerdant, chúng tôi tin rằng mỹ phẩm không chỉ đơn thuần là công cụ làm đẹp mà còn là cách bạn thể hiện bản thân và yêu thương làn da. Chất lượng và sự an toàn luôn là ưu tiên hàng đầu trong từng sản phẩm của chúng tôi. Mỗi sản phẩm đều được chọn lọc kỹ càng từ những thành phần thiên nhiên tốt nhất, hoàn toàn không thử nghiệm trên động vật và không chứa hóa chất độc hại.</p>
+            <p></p><span style="color: #35502a;"><em><strong>Bộ sưu tập đa dạng</strong></em></span>
+            VitaVerdant mang đến nhiều dòng sản phẩm phù hợp với mọi nhu cầu, từ chăm sóc da mặt, cơ thể đến trang điểm. Từ các loại kem dưỡng ẩm giàu dưỡng chất, serum phục hồi, đến son môi hay phấn má thời thượng, mỗi sản phẩm đều được thiết kế để giúp bạn tỏa sáng một cách tự nhiên.</p>
+            <p>Đội ngũ chuyên gia làm đẹp của chúng tôi luôn sẵn sàng đồng hành, tư vấn tận tình để bạn tìm ra giải pháp phù hợp nhất cho làn da của mình.</p>
+            <p></p><span style="color: #35502a;"><em><strong>Xu hướng và công nghệ xanh</strong></em></span>
+            VitaVerdant luôn cập nhật xu hướng mới nhất trong ngành mỹ phẩm thuần chay, mang đến cho bạn những sản phẩm tiên tiến và thân thiện với môi trường. Chúng tôi không ngừng nghiên cứu và áp dụng công nghệ xanh hiện đại vào quy trình sản xuất, từ việc chọn lựa nguyên liệu đến đóng gói, để đảm bảo mỗi sản phẩm không chỉ tốt cho bạn mà còn tốt cho hành tinh.</p>
+            <p></p><span style="color: #35502a;"><em><strong>Trải nghiệm cùng VitaVerdant</strong></em></span>
+            Hãy để VitaVerdant trở thành người bạn đồng hành đáng tin cậy trên hành trình chăm sóc làn da và khơi dậy vẻ đẹp thuần khiết từ bên trong. Chúng tôi cam kết mang đến những trải nghiệm mua sắm tuyệt vời, dịch vụ tận tâm, và một thông điệp mạnh mẽ về tình yêu đối với thiên nhiên.</p>
+            <p><strong>VitaVerdant – nơi vẻ đẹp gặp gỡ sự bền vững.</strong></p>
+    </main>
+
+    <!-- Start Vutrutruyenthong -->
+    <div class="we-help-section">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-lg-7 mb-5 mb-lg-0">
+            <div class="imgs-grid">
+              <div class="grid grid-1"><a href="https://www.instagram.com/vitaverdant_?igsh=eHNyMGRoY2lnZzJ5&utm_source=qr" target="_blank"><img
+                    src="Trangchinh/images/ig1.jpg" alt="Untree.co"></a></div>
+              <div class="grid grid-2"><a href="https://www.tiktok.com/@mptcvitaverdant?_t=8rnXl1zlRsF&_r=1" target="_blank"><img
+                    src="Trangchinh/images/tiktok1.jpg" alt="Untree.co"></a></div>
+              <div class="grid grid-3"><a href="https://www.facebook.com/share/19TwtrG2gJ/?mibextid=LQQJ4d"
+                  target="_blank"><img src="Trangchinh/images/fb1.jpg" alt="Untree.co"></a></div>
+            </div>
+          </div>
+          <div class="col-lg-5 ps-lg-5">
+            <h2 class="section-title mb-4">VitaVerdant - Người bạn đồng hành của vẻ đẹp thuần chay</h2>
+        <p>Mỹ phẩm thuần chay VitaVerdant chắc chắn không còn quá xa lạ với những ai yêu thích vẻ đẹp tự nhiên và bền vững. Đây là kênh thông tin mua sắm và truyền cảm hứng sống xanh dành cho mọi tín đồ làm đẹp, trở thành “món ăn tinh thần” không thể thiếu mỗi ngày.</p>
+
+        <h2 class="section-title mb-4">Hành trình phát triển</h2>
+        <p>VitaVerdant, thành lập từ năm 2024, cố gắng trở thành lựa chọn hàng đầu của những người yêu mỹ phẩm thuần chay trong tương lai gần nhất. Với việc liên tục cập nhật các xu hướng làm đẹp mới nhất và hiểu rõ sở thích của khách hàng thông qua các nền tảng mạng xã hội như Facebook, TikTok và Instagram, VitaVerdant duy trì vị thế tiên phong trong việc mang đến những nội dung hấp dẫn và đầy giá trị.</p>
+
+        <h2 class="section-title mb-4" >Kết hợp hoàn hảo giữa giải trí và thông tin</h2>
+        <p>Dù bạn đang tìm kiếm các bài viết chuyên sâu về chăm sóc da, mẹo làm đẹp hay những video hướng dẫn trang điểm thuần chay, VitaVerdant đảm bảo sự hòa quyện hoàn hảo giữa tính giải trí và thông tin thiết thực. Hãy để VitaVerdant trở thành người bạn đồng hành đáng tin cậy, cùng bạn khám phá hành trình làm đẹp tự nhiên và bền vững!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- End Vutrutruyenthong -->
+<!--start maps-->
+    <div class="container1">
+      <div class="left-section">
+        <img class="imght" src="Trangchinh/images/Vector-3-1.svg">
+        <h2 class="hethong">Hệ thống cửa hàng</h2>
+
+      </div>
+      <div class="right-section">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14898.367896154909!2d105.80940270728475!3d21.008986905362246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac801a451e4d%3A0xdd75c8b1e3c49023!2zTmcuIDEyIFAuIENow7lhIELhu5ljLCBRdWFuZyBUcnVuZywgxJDhu5FuZyDEkGEsIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1734717255246!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+<!--End maps-->
+<br>
+
+    <!-- Start Footer Section -->
+    <footer class="footer-section">
+      <div class="container relative">
+
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="subscription-form">
+              <h3 class="d-flex align-items-center"><span class="me-1"><img
+                    src="/Trangchinh/images/envelope-outline.svg" alt="Image" class="img-fluid"></span><span>Hãy gửi
+                  phản hồi cho chúng tôi nếu bạn gặp vấn đề gì.</span></h3>
+
+              <form action="#" class="row g-3">
+                <div class="col-auto">
+                  <input type="text" class="form-control" placeholder="Enter your name">
+                </div>
+                <div class="col-auto">
+                  <input type="email" class="form-control" placeholder="Enter your email">
+                </div>
+                <div class="col-auto">
+                  <button class="btn btn-primary">
+                    <span class="fa fa-paper-plane"></span>
+                  </button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-5 mb-5">
+          <div class="col-lg-4">
+            <div class="mb-4 footer-logo-wrap"><a href="index.html" class="footer-logo">VitaVerdant</a></div>
+            <p class="mb-4">🌿 VitaVerdant không chỉ đơn thuần là mỹ phẩm, mà là sự lựa chọn của những tâm hồn yêu thiên nhiên và trân quý vẻ đẹp bền vững. Mỗi sản phẩm đều được chắt lọc từ những thành phần thuần chay tinh túy nhất, kết tinh cùng tâm huyết về chất lượng và sự an toàn. Chúng tôi cam kết mang đến những trải nghiệm làm đẹp chân thực, thân thiện với môi trường và đồng hành cùng bạn kiến tạo một lối sống lành mạnh, đầy cảm hứng. Với VitaVerdant, bạn không chỉ chăm sóc bản thân mà còn góp phần nâng niu hành tinh xanh.
+            </p>
+
+            <ul class="list-unstyled custom-social">
+              <li><a href="https://www.facebook.com/share/19TwtrG2gJ/?mibextid=LQQJ4d" target="_blank"><span
+                    class="fa fa-brands fa-facebook-f"></span></a></li>
+              <li><a href="https://www.tiktok.com/@mptcvitaverdant?_t=8rnXl1zlRsF&_r=1" target="_blank"><span
+                    class="fa fa-brands fa-tiktok"></span></a></li>
+              <li><a href="https://www.instagram.com/vitaverdant_?igsh=eHNyMGRoY2lnZzJ5&utm_source=qr" target="_blank"><span
+                    class="fa fa-brands fa-instagram"></span></a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="row links-wrap">
+              <div class="col-6 col-sm-6 col-md-3">
+                <ul class="list-unstyled">
+                  <li>
+                    <p style="color: black;"><b>Tất cả sản phẩm</b></p>
+                  </li>
+                  <li><a href="#">Trang điểm</a></li>
+                  <li><a href="#">Chăm sóc da</a></li>
+                  <li><a href="#">Chăm sóc tóc</a></li>
+                  <li><a href="#">Chăm sóc cơ thể</a></li>
+                  <li><a href="#">Hương thơm</a></li>
+                  <li><a href="#">Quà tặng</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-sm-6 col-md-3">
+                <ul class="list-unstyled">
+                  <li>
+                    <p style="color: black;"><b>Chính sách mua hàng</b></p>
+                  </li>
+                  <li><a href="#">Hình thức thanh toán</a></li>
+                  <li><a href="#">Chính sách giao hàng</a></li>
+                  <li><a href="#">Chính sách bảo hành</a></li>
+                  <li><a href="#">Chính sách bảo mật</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-sm-6 col-md-3">
+                <ul class="list-unstyled">
+                  <li>
+                    <p style="color: black;"><b>Thông tin liên hệ</b></p>
+                  </li>
+                  <li><a href="#">Hotline: 0827084425</a></li>
+                  <li><a href="#">Email: viaverdant.cskh@gmail.com</a></li>
+                  <li><a href="#">Cơ sở 1: số 1 ngõ 12 Chùa Bộc, Quang Trung, Đống Đa, Hà Nội </a></li>
+
+                </ul>
+              </div>
+
+              <div class="col-6 col-sm-6 col-md-3">
+                <ul class="list-unstyled">
+                  <li>
+                    <p style="color: black;"><b>Về VitaVerdant</b></p>
+                  </li>
+                  <li><a href="#">Giới thiệu</a></li>
+                  <li><a href="#">Liên hệ</a></li>
+                  <li><a href="#">Hệ thống cửa hàng</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+</body>
+
+</html>
